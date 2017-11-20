@@ -203,6 +203,9 @@ javax\.microedition\.khronos\.egl
 android
 
 ###################################################
+org\.codeaurora\..*
+
+###################################################
 # apache-xml.jar
 org\.apache\.xml\.res
 org\.apache\.xml\.utils
