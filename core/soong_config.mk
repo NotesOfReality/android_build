@@ -85,6 +85,8 @@ $(SOONG_VARIABLES): FORCE du_soong
 	echo '    "Pdk": $(if $(filter true,$(TARGET_BUILD_PDK)),true,false),'; \
 	echo '    "Libart_img_base": "$(LIBART_IMG_BASE)",'; \
 	echo ''; \
+	echo '    "Target_shim_libs": "$(TARGET_LD_SHIM_LIBS)",'; \
+	echo ''; \
 	echo '    "ArtUseReadBarrier": $(if $(filter false,$(PRODUCT_ART_USE_READ_BARRIER)),false,true),'; \
 	echo ''; \
 	echo '    "BtConfigIncludeDir": "$(BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR)",'; \
