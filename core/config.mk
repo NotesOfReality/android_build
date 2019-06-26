@@ -967,4 +967,6 @@ include $(TOPDIR)vendor/extras/core/qcom_target.mk
 endif
 
 # DU common sepolicy
-include $(TOPDIR)vendor/du/sepolicy/sepolicy.mk
+## We need to be sure the global selinux policies are included
+## last, to avoid accidental resetting by device configs
+include $(TOPDIR)device/du/sepolicy/common/sepolicy.mk
