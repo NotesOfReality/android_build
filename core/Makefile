@@ -1261,7 +1261,7 @@ define build-recoveryramdisk
   @echo "Generating Changelog"
   $(hide) mkdir -p ./changelogs/$(TARGET_PRODUCT)
   $(hide) ./vendor/du/tools/changelog.sh
-  $(hide) mv $(PRODUCT_OUT)/Changelog.txt ./changelogs/$(TARGET_PRODUCT)/Changelog.txt
+  $(hide) mv $(PRODUCT_OUT)/Changelog.txt ./changelogs/$(TARGET_PRODUCT)/Changelog_$(DU_BASE_VERSION)-$(DATE)-$(shell date -u +%H%M).txt
   @echo ----- Making recovery ramdisk ------
   $(hide) mkdir -p $(TARGET_RECOVERY_OUT)
   $(hide) mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/etc $(TARGET_RECOVERY_ROOT_OUT)/sdcard $(TARGET_RECOVERY_ROOT_OUT)/tmp
